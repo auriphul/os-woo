@@ -1,0 +1,15 @@
+{
+    "name": "dell/autologiq-core",
+    "authors": [
+        {
+            "name": "Aurang Zeb",
+            "email": "aurangzeb@itsolution24x7.net"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "FrontEnd\\":"public"
+        }
+    }
+}
