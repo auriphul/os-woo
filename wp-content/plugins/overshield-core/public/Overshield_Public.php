@@ -36,7 +36,9 @@ if ( ! class_exists( 'Overshield_Public' ) ) {
             ]);
         }
         function os_customer_create(\WP_REST_Request $request){
-            return 'customer-create working';
+            $request_body   =   json_decode($request->get_body());
+            $user_saved     =   wc_create_new_customer($request_body->email);
+            return $user_saved;
         }
         function os_plan_expiry_date( \WP_REST_Request $request ){
             $user_id = $request->get_param('user_id');
